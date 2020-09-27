@@ -1,10 +1,16 @@
-<div id="pie" name="pie" style="border: 1px solid blue">
-        futuro footer en el pie de la pagina
+
+<div class="col-12 bg-dark text-white text-center border border-dark shadow" id="pie" name="pie">
+    <h2>Este es el pie</h2>
 </div>
-<!--Agregando JQUERY,POPPER y luego bootstrap js!-->
-<script src="js/jquery.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+
+</div>
+
+<script src="../../js/jquery-3.5.1.slim.min.js"></script>
+<script src="../../js/popper.min.js"></script>
+<script src="../../js/bootstrap/bootstrap.min.js"></script>
+<script src="../../js/bootstrap/bootstrapValidator.min.js"></script>
+<!--<script src="../../js/bootstrap/form-validation.js"></script>-->
+<script src="../../js/bootstrap/validator.js"></script>
 
 </body>
 
