@@ -6,18 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practico_1_y_2</title>
     <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
-    <!--<link rel="stylesheet" type="text/css" href="../../css/form-validation.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="../../css/form-validation.css"> auxiliar-->
     <link rel="stylesheet" type="text/css" href="../../css/bootstrapValidator.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
     <style>
         /*Como son unas lineas de codigo, los deje para variar un poco los iconos*/
-        .fa-smile{
+        .fa-smile {
             color: green;
         }
-        .fa-angry{
+        .fa-angry {
             color: red;
         }
-        </style>
+        .placeicon {
+            font-family: fontawesome;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: inherit;
+            /*
+            font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: inherit;*/
+        }
+        
+    </style>
 </head>
 
 <body>
@@ -27,7 +39,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
     </nav>
-    <div class="container-fluid bg-primary">
+    <div class="container-fluid bg-primary ">
         <?php
         include_once("../../../configuracion.php");
         include_once("lateral.php");

@@ -84,7 +84,7 @@ class control
         $res = $this->validarDatos2($datos);
         $estudio = $datos["estudio"];
         $sexo = $datos["sexo"];
-        $res .="<b><br>Mi sexo es " . $sexo .
+        $res .= "<b><br>Mi sexo es " . $sexo .
             " y mi situacion de estudio es " . $estudio . "</b> ";
         return $res;
     }
@@ -98,8 +98,8 @@ class control
                 $juego .= $juega . ", ";
                 $contar++;
             }
-            $res .= "<b><br>Ademas juego a " . $juego ."realizo " . $contar . " deporte/s</b>";
-        }else{
+            $res .= "<b><br>Ademas juego a " . $juego . "realizo " . $contar . " deporte/s</b>";
+        } else {
             $res .= "<b><br>No realizo deportes</b>";
         }
         return $res;
@@ -140,12 +140,12 @@ class control
         $apellido = $datos["apellido"];
         $edad = $datos["edad"];
         $estudiante = $datos["estudiante"];
-        $res ="El precio de la entrada es de ";
-        if($edad<12){
+        $res = "El precio de la entrada es de ";
+        if ($edad < 12) {
             $res .= "$160";
-        }else if($estudiante=="s"){
+        } else if ($estudiante == "s") {
             $res .= "$180";
-        }else{
+        } else {
             $res .= "$300";
         }
         return $res;

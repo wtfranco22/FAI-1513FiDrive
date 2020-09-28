@@ -1,7 +1,6 @@
 
 <?php
 include_once("../../estructura/cabecera.php");
-include_once("../../../control/control.php");
 ?>
 <div id="accion5" name="accion5" class="col-md-9 col-lg-10 bg-light">
     <?php

@@ -16,7 +16,7 @@ class BaseDeDatos {
      */
     public function __construct(){
         $this->HOSTNAME = "localhost";
-        $this->BASEDATOS = "dbusuarios";
+        $this->BASEDATOS = "dbteatro";
         $this->USUARIO = "root";
         $this->CLAVE="";
         $this->RESULT=0;

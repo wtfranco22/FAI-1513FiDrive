@@ -2,9 +2,9 @@ $('#eje1').bootstrapValidator({
     message: 'Este valor no es valido',
 
     feedbackIcons: {
-        valid: 'fas fa-smile',
-        invalid: 'fas fa-angry',
-        validating: 'fa fa-circle',
+        valid: 'fa fa-thumbs-up',
+        invalid: 'fa fa-thumbs-down',
+        validating: 'fa fa-thumbs-down',
     },
 
     fields: {
@@ -25,9 +25,9 @@ $('#eje3').bootstrapValidator({
     message: 'Este valor no es valido',
 
     feedbackIcons: {
-        valid: 'fas fa-smile',
-        invalid: 'fas fa-angry',
-        validating: 'fa fa-circle'
+        valid: 'fa fa-thumbs-up',
+        invalid: 'fa fa-thumbs-down',
+        validating: 'fa fa-thumbs-down'
     },
 
     fields: {
@@ -88,9 +88,9 @@ $('#eje4').bootstrapValidator({
     message: 'Este valor no es valido',
 
     feedbackIcons: {
-        valid: 'fas fa-smile',
-        invalid: 'fas fa-angry',
-        validating: 'fa fa-circle'
+        valid: 'fa fa-thumbs-up',
+        invalid: 'fa fa-thumbs-down',
+        validating: 'fa fa-thumbs-down'
     },
 
     fields: {
@@ -152,9 +152,9 @@ $('#eje5').bootstrapValidator({
     message: "Ingrese un valor valido",
 
     feedbackIcons: {
-        valid: 'fas fa-smile',
-        invalid: 'fas fa-angry',
-        validating: 'fa fa-circle'
+        valid: 'fa fa-thumbs-up',
+        invalid: 'fa fa-thumbs-down',
+        validating: 'fa fa-thumbs-down'
     },
 
     fields: {
@@ -221,11 +221,10 @@ $('#eje6').bootstrapValidator({
     message: "Ingrese un valor valido",
 
     feedbackIcons: {
-        valid: 'fas fa-smile',
-        invalid: 'fas fa-angry',
-        validating: 'fa fa-circle'
+        valid: 'fa fa-thumbs-up',
+        invalid: 'fa fa-thumbs-down',
+        validating: 'fa fa-thumbs-down'
     },
-
     fields: {
         nombre: {
             validators: {
@@ -270,7 +269,8 @@ $('#eje6').bootstrapValidator({
                     message: 'Necesitamos la dirección'
                 },
                 regexp: {
-                    regexp: /^[0-9a-zA-Z\s]+$/
+                    regexp: /^[0-9a-zA-Z\s]+$/,
+                    message: 'Nada de caracteres raros!'
                 },
                 stringLength: {
                     max: 100
@@ -297,9 +297,9 @@ $('#eje7').bootstrapValidator({
     message: 'Este valor no es valido',
 
     feedbackIcons: {
-        valid: 'fas fa-smile',
-        invalid: 'fas fa-angry',
-        validating: 'fa fa-circle',
+        valid: 'fa fa-thumbs-up',
+        invalid: 'fa fa-thumbs-down',
+        validating: 'fa fa-thumbs-down',
     },
 
     fields: {
@@ -329,11 +329,10 @@ $('#eje8').bootstrapValidator({
     message: 'Este valor no es valido',
 
     feedbackIcons: {
-        valid: 'fas fa-smile',
-        invalid: 'fas fa-angry',
-        validating: 'fa fa-circle'
+        valid: 'fa fa-thumbs-up',
+        invalid: 'fa fa-thumbs-down',
+        validating: 'fa fa-thumbs-down'
     },
-
     fields: {
         nombre: {
             validators: {
@@ -344,7 +343,7 @@ $('#eje8').bootstrapValidator({
                     regexp: /^[a-zA-ZáéíóúÁÉÍÓÚ]+$/,
                     message: 'No debe ingresar números o simbolo'
                 },
-                
+
             }
         },
         apellido: {
@@ -379,3 +378,164 @@ $('#eje8').bootstrapValidator({
         }
     }
 });
+$('#eje11').bootstrapValidator({
+    message: 'Este valor no es valido',
+
+    feedbackIcons: {
+        valid: 'fa fa-thumbs-up',
+        invalid: 'fa fa-thumbs-down',
+        validating: 'fa fa-thumbs-down'
+    },
+
+    fields: {
+        usuario: {
+            validators: {
+                notEmpty: {
+                    message: 'Debe ingresar el usuario',
+                },
+                regexp: {
+                    regexp: /^[a-zA-Z0-9\s]+$/,
+                    message: 'No Debe ingresar caracteres especiales',
+                },
+            }
+        },
+        clave: {
+            validators: {
+                notEmpty: {
+                    message: 'Debe completar la contraseña'
+                },
+                regexp: {
+                    regexp: /\s?(?=[a-zA-Z]*[0-9]+)(?=[0-9]*[a-zA-Z]+)/,
+                    message: 'al menos una letra y un número'
+                },
+                stringLength: {
+                    min: 8,
+                    message: 'Al menos 8 caracteres',
+                },
+            }
+        }
+    }
+});
+$('#eje12').bootstrapValidator({
+    message: 'Este valor no es valido',
+    feedbackIcons: {
+        valid: 'fa fa-thumbs-up',
+        invalid: 'fa fa-thumbs-down',
+        validating: 'fa fa-thumbs-down'
+    },
+    fields: {
+        titulo: {
+            validators: {
+                notEmpty: {
+                    message: 'Debe ingresar el titulo',
+                },
+                regexp: {
+                    regexp: /[0-9a-zA-Z\s]*/,
+                    message: 'Sin sombolos extraños',
+                },
+            },
+        },
+        actores: {
+            validators: {
+                notEmpty: {
+                    message: 'Al menos un actor debe ingresar',
+                },
+                regexp: {
+                    regexp: /[a-zA-Z\s,]*/,
+                    message: 'Sin simbolos extraños',
+                },
+            },
+        },
+        dire: {
+            validators: {
+                notEmpty: {
+                    message: 'Ingrese nombre del director',
+                },
+                regexp: {
+                    regexp: /[a-zA-Z\s]*/,
+                    message: 'Solo letras por favor',
+                },
+            }
+        },
+        guion: {
+            validators: {
+                notEmpty: {
+                    message: 'Ingrese el gión',
+                },
+            },
+        },
+        produccion: {
+            validators: {
+                notEmpty: {
+                    message: 'Ingrese la producción',
+                },
+            }
+        },
+        anio: {
+            validators: {
+                notEmpty: {
+                    message: 'Ingrese el año por favor!',
+                },
+                numeric: {
+                    message: 'Solamente números!',
+                },
+                stringLength: {
+                    min: 1,
+                    max: 4,
+                    message: 'Ingrese un año valido',
+                },
+            }
+        },
+        nacionalidad: {
+            validators: {
+                notEmpty: {
+                    message: 'Ingrese la nacionalidad',
+                },
+                regexp: {
+                    regexp: /[a-zA-ZáéíóúÁÉÍÓÚ\s]*/,
+                }
+            }
+        },
+        genero: {
+            validators: {
+                notEmpty: {
+                    message: 'Género, por favor!',
+                },
+            }
+        },
+        duracion: {
+            validators: {
+                notEmpty: {
+                    message: 'Los minutos de la pelicula',
+                },
+                numeric: {
+                    message: 'Solo números por favor',
+                },
+                stringLength: {
+                    min: 1,
+                    max: 3,
+                    message: 'Minutos de 3 dígitos',
+                },
+            },
+        },
+        espectador: {
+            validators: {
+                notEmpty: {
+                    message: "Seleccione la edad acorde",
+                },
+            }
+        },
+        sinopsis: {
+            validators: {
+                notEmpty: {
+                    message: 'Ingrese la sinopsis',
+                }
+            }
+        }
+    }
+});
+
+/*regexp: {
+    regexp: '(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,}$',
+    message: 'Debe tener al menos un numero, letra mayuscula y minuscula'
+}*/

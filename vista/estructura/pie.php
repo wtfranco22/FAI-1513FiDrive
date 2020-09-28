@@ -9,7 +9,7 @@
 <script src="../../js/popper.min.js"></script>
 <script src="../../js/bootstrap/bootstrap.min.js"></script>
 <script src="../../js/bootstrap/bootstrapValidator.min.js"></script>
-<!--<script src="../../js/bootstrap/form-validation.js"></script>-->
+<!--<script src="../../js/bootstrap/form-validation.js">auxiliar</script>-->
 <script src="../../js/bootstrap/validator.js"></script>
 
 </body>
