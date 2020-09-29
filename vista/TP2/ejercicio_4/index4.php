@@ -5,7 +5,7 @@ include_once("../../estructura/cabecera.php");
 <div class="p-3 col-md-9 col-lg-10 bg-white">
     <div class="border border-light m-3 shadow">
         <a class="text-justify text-primary btn btn-light btn-block bg-light"><i class="fa fa-pencil-square-o"></i> Cinem@as</a>
-        <form class="p-4" id="eje12" name="eje12" action="accion12.php" method="POST" data-toggle="validator" autocomplete="off">
+        <form class="p-4" id="eje4" name="eje4" action="accion4.php" method="POST" data-toggle="validator" autocomplete="on">
             <div class="form-row">
                 <div class="col-md-6 form-group">
                     <label for="titulo">Título: </label>
@@ -45,10 +45,10 @@ include_once("../../estructura/cabecera.php");
                     <label for="genero">Género: </label>
                     <select id="genero" name="genero" class="form-control">
                         <option value="">SELECCIONAR</option>
-                        <option value="accion">Acción</option>
+                        <option value="acción">Acción</option>
                         <option value="aventura">Aventura</option>
                         <option value="comedia">Comedia</option>
-                        <option value="ciencia ficcion">Ciencia ficción</option>
+                        <option value="ciencia ficción">Ciencia ficción</option>
                         <option value="drama">Dramática</option>
                         <option value="infantiles">Infantiles</option>
                         <option value="romanticas">Románticas</option>
@@ -62,19 +62,20 @@ include_once("../../estructura/cabecera.php");
                 <div class="col-md-3 form-group">
                     <label for="duracion">Duración: </label>
                     <input type="number" id="duracion" name="duracion" class="form-control" placeholder="Duración">
+                    <small class="form-text text-muted">(Minutos)</small>
                 </div>
                 <div class="col-md-9">
                     <h5>Restricciones de edad</h5>
                     <div class="col-md-4 form-check-inline">
-                        <input class="form-check-input" type="radio" id="apt" name="espectador" value="apt">
+                        <input class="form-check-input" type="radio" id="apt" name="espectador" value="Todo público">
                         <label class="form-check-label" for="apt">Todo público</label>
                     </div>
                     <div class="col-md-4 form-check-inline">
-                        <input class="form-check-input" type="radio" id="menor" name="espectador" value="menor">
+                        <input class="form-check-input" type="radio" id="menor" name="espectador" value="Mayores de 7 años">
                         <label class="form-check-label" for="menor">Mayores de 7 años</label>
                     </div>
                     <div class="col-md-3 form-check-inline">
-                        <input class="form-check-input" type="radio" id="mayor" name="espectador" value="mayor">
+                        <input class="form-check-input" type="radio" id="mayor" name="espectador" value="Mayores de 18 años">
                         <label class="form-check-label" for="mayor">Mayores de 18 años</label>
                     </div>
 
@@ -90,7 +91,6 @@ include_once("../../estructura/cabecera.php");
             </div>
         </form>
     </div>
-
 </div>
 
 
