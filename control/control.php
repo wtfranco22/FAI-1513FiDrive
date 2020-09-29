@@ -2,6 +2,10 @@
 
 class control
 {
+    public function prueba()
+    {
+        return "Este viaja al acción1.php, crea objeto, y viaja al control.php verificando los datos del index";
+    }
 
     public function verNumero($datos)
     {
@@ -148,6 +152,34 @@ class control
         } else {
             $res .= "$300";
         }
+        return $res;
+    }
+
+    public function registrarPelicula($datos)
+    {
+        $titulo = $datos["titulo"];
+        $actores = $datos["actores"];
+        $director = $datos["dire"];
+        $guion = $datos["guion"];
+        $produccion = $datos["produccion"];
+        $anio = $datos["anio"];
+        $nacionalidad = $datos["nacionalidad"];
+        $genero = $datos["genero"];
+        $duracion = $datos["duracion"];
+        $edades = $datos["espectador"];
+        $sinopsis = $datos["sinopsis"];
+        $res =
+            "<b>Titulo</b>: " . $titulo . "<br>" .
+            "<b>Actores</b>: " . $actores . "<br>" .
+            "<b>Director</b>: " . $director . "<br>" .
+            "<b>Guión</b>: " . $guion . "<br>" .
+            "<b>Producción</b>: " . $produccion . "<br>" .
+            "<b>Año</b>: " . $anio . "<br>" .
+            "<b>Nacionalidad</b>: " . $nacionalidad . "<br>" .
+            "<b>Género</b>: " . $genero . "<br>" .
+            "<b>Duración</b>: " . $duracion . "<br>" .
+            "<b>Restricciones de edad</b>: " . $edades. "<br>".
+            "<b>Sinopsis</b>: " . $sinopsis . "<br>";
         return $res;
     }
 }
