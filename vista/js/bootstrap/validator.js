@@ -1,3 +1,14 @@
+function mostrarClave() {
+    var cambio = document.getElementById("clave");
+    if (cambio.type == "password") {
+        cambio.type = "text";
+        $('#ojo').removeClass('fa fa-eye-slash').addClass('fa fa-eye');
+    } else {
+        cambio.type = "password";
+        $('#ojo').removeClass('fa fa-eye').addClass('fa fa-eye-slash');
+    }
+}
+
 $('#eje1').bootstrapValidator({
     message: 'Este valor no es valido',
 
@@ -74,7 +85,7 @@ $('#eje3').bootstrapValidator({
                     message: 'Necesitamos la dirección'
                 },
                 regexp: {
-                    regexp: /^[0-9a-zA-Z\s]+$/
+                    regexp: /^[0-9a-zA-Z\s,]+$/
                 },
                 stringLength: {
                     max: 100
@@ -137,7 +148,7 @@ $('#eje4').bootstrapValidator({
                     message: 'Necesitamos la dirección'
                 },
                 regexp: {
-                    regexp: /^[0-9a-zA-Z\s]+$/
+                    regexp: /^[0-9a-zA-Z\s,]+$/
                 },
                 stringLength: {
                     max: 100
@@ -147,7 +158,6 @@ $('#eje4').bootstrapValidator({
     }
 }
 );
-
 $('#eje5').bootstrapValidator({
     message: "Ingrese un valor valido",
 
@@ -269,7 +279,7 @@ $('#eje6').bootstrapValidator({
                     message: 'Necesitamos la dirección'
                 },
                 regexp: {
-                    regexp: /^[0-9a-zA-Z\s]+$/,
+                    regexp: /^[0-9a-zA-Z\s,]+$/,
                     message: 'Nada de caracteres raros!'
                 },
                 stringLength: {
@@ -394,7 +404,7 @@ $('#eje11').bootstrapValidator({
                     message: 'Debe ingresar el usuario',
                 },
                 regexp: {
-                    regexp: /^[a-zA-Z0-9\s]+$/,
+                    regexp: /^[a-zA-Z0-9]+$/,
                     message: 'No Debe ingresar caracteres especiales',
                 },
             }
@@ -430,7 +440,7 @@ $('#eje12').bootstrapValidator({
                     message: 'Debe ingresar el titulo',
                 },
                 regexp: {
-                    regexp: /[0-9a-zA-Z\s]*/,
+                    regexp: /^[0-9a-zA-ZáéíóúÁÉÍÓÚ\s,]+$/,
                     message: 'Sin sombolos extraños',
                 },
             },
@@ -441,7 +451,7 @@ $('#eje12').bootstrapValidator({
                     message: 'Al menos un actor debe ingresar',
                 },
                 regexp: {
-                    regexp: /[a-zA-Z\s,]*/,
+                    regexp: /^[0-9a-zA-ZáéíóúÁÉÍÓÚ\s,]+$/,
                     message: 'Sin simbolos extraños',
                 },
             },
@@ -452,7 +462,7 @@ $('#eje12').bootstrapValidator({
                     message: 'Ingrese nombre del director',
                 },
                 regexp: {
-                    regexp: /[a-zA-Z\s]*/,
+                    regexp: /^[0-9a-zA-ZáéíóúÁÉÍÓÚ\s,]+$/,
                     message: 'Solo letras por favor',
                 },
             }
@@ -492,7 +502,7 @@ $('#eje12').bootstrapValidator({
                     message: 'Ingrese la nacionalidad',
                 },
                 regexp: {
-                    regexp: /[a-zA-ZáéíóúÁÉÍÓÚ\s]*/,
+                    regexp: /[a-zA-ZáéíóúÁÉÍÓÚ\s]+/,
                 }
             }
         },
@@ -514,7 +524,7 @@ $('#eje12').bootstrapValidator({
                 stringLength: {
                     min: 1,
                     max: 3,
-                    message: 'Minutos de 3 dígitos',
+                    message: '3 dígitos',
                 },
             },
         },
