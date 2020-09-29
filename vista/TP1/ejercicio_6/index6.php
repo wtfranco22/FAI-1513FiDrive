@@ -24,15 +24,15 @@ include_once("../../estructura/cabecera.php");
         <fieldset>
             <h4>Estudios</h4>
             <div class="form-check">
-                <input class="form-check-input" type="radio" id="sinEstudio" name="estudio" value="sin estudio" required>
+                <input class="form-check-input" type="radio" id="sinEstudio" name="estudio" value="sin estudio">
                 <label class="form-check-label" for="sinEstudio">Sin estudio</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" id="primario" name="estudio" value="primario" required>
+                <input class="form-check-input" type="radio" id="primario" name="estudio" value="primario">
                 <label class="form-check-label" for="primario">Estudio primario</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" id="secundario" name="estudio" value="secundario" required>
+                <input class="form-check-input" type="radio" id="secundario" name="estudio" value="secundario">
                 <label class="form-check-label" for="secundario">Estudio secundario</label>
             </div>
         </fieldset>
