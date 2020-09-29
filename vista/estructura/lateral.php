@@ -1,6 +1,6 @@
 <div class="row shadow">
     <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse">
-        <button class="btn btn-dark shadow mt-5 mb-5 shadow" data-toggle="collapse" data-target="#tp1">Trabajo Practico 1</button>
+        <button class="btn btn-dark mt-5 mb-5 btn-block" data-toggle="collapse" data-target="#tp1">Trabajo Practico 1</button>
         <div id="tp1" class="collapse">
             <div class="list-group">
                 <a href="../../TP1/ejercicio_1/index1.php" class="list-group-item">
@@ -21,7 +21,7 @@
                     Ejercicio 8</a>
             </div>
         </div>
-        <button class="btn btn-dark shadow mt-5 mb-5 shadow" data-toggle="collapse" data-target="#tp2">Trabajo Practico 2</button>
+        <button class="btn btn-dark mt-5 mb-5 btn-block" data-toggle="collapse" data-target="#tp2">Trabajo Practico 2</button>
         <div id="tp2" class="collapse">
             <div class="list-group">
                 <a href="../../TP2/ejercicio_3/index3.php" class="list-group-item">
@@ -30,7 +30,7 @@
                     Ejercicio 2</a>
             </div>
         </div>
-        <button class="btn btn-dark shadow mt-5 mb-5 shadow" data-toggle="collapse" data-target="#tpe">Trabajos Practicos E</button>
+        <button class="btn btn-dark mt-5 mb-5 btn-block" data-toggle="collapse" data-target="#tpe">Trabajos Practicos E</button>
         <div id="tpe" class="collapse">
             <div class="list-group">
                 <a href="../../TPE/1/index1.php" class="list-group-item">
