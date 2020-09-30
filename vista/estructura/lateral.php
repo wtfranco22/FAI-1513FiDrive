@@ -35,6 +35,14 @@
             <div class="list-group">
                 <a href="../../TPE/1/index1.php" class="list-group-item">
                     Entrega 1</a>
+                <a href="../../TPE/2/armarchivo.php" class="list-group-item">
+                    Armar archivo</a>
+                <a href="../../TPE/2/compartirarchivo.php" class="list-group-item">
+                    Compartir archivo</a>
+                <a href="../../TPE/2/eliminararchivocompartido.php" class="list-group-item">
+                    Eliminar archivo compartido</a>
+                <a href="../../TPE/2/eliminararchivo.php" class="list-group-item">
+                    Eliminar archivo</a>
             </div>
         </div>
     </nav>

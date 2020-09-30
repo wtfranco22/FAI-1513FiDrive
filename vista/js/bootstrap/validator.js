@@ -1,3 +1,23 @@
+function mostrarClave() {
+    var cambio = document.getElementById("clave");
+    if (cambio.type == "password") {
+        cambio.type = "text";
+        $('#ojo').removeClass('fa fa-eye-slash').addClass('fa fa-eye');
+    } else {
+        cambio.type = "password";
+        $('#ojo').removeClass('fa fa-eye').addClass('fa fa-eye-slash');
+    }
+}
+function ingresarClave() {
+    contra = document.getElementById("ingresarclave");
+    protege = document.getElementById("protegerpass");
+    if (protege.checked) {
+        contra.style.display='block';
+    }
+    else {
+        contra.style.display='none';
+    }
+}
 $('#eje1').bootstrapValidator({
     message: 'Este valor no es valido',
 
@@ -532,6 +552,175 @@ $('#eje12').bootstrapValidator({
             }
         }
     }
+});
+$('#armarchivo').bootstrapValidator({
+    message: 'Este valor no es valido',
+    feedbackIcons: {
+        valid: 'fa fa-thumbs-up',
+        invalid: 'fa fa-thumbs-down',
+        validating: 'fa fa-thumbs-down'
+    },
+    fields: {
+        nombre: {
+            validators: {
+                notEmpty: {
+                    message: 'Debe contener un nombre el archivo'
+                },
+                regexp: {
+                    regexp: /^[0-9a-zA-Z-_.]+$/,
+                    message: 'Sin caracteres especiales',
+                },
+            },
+        },
+        descripcion: {
+            validators: {
+                notEmpty: {
+                    message: 'Debe tener una descripción',
+                },
+            },
+        },
+        usuario: {
+            validators: {
+                notEmpty: {
+                    message: 'Debe elegir el usuario',
+                },
+            },
+        },
+        tipo: {
+            validators: {
+                notEmpty: {
+                    message: 'Debe elegir el tipo de archivo',
+                },
+            },
+        },
+        clave: {
+            validators: {
+                notEmpty: {
+                    message: 'Debe contener una clave',
+                },
+                stringLength: {
+                    min: 8,
+                    message: 'Al menos 8 caracteres',
+                },
+            },
+        },
+    }
+});
+$('#compartirarchivo').bootstrapValidator({
+    message: 'Este valor no es valido',
+    feedbackIcons: {
+        valid: 'fa fa-thumbs-up',
+        invalid: 'fa fa-thumbs-down',
+        validating: 'fa fa-thumbs-down'
+    },
+    fields: {
+        nombre: {
+            validators: {
+                notEmpty: {
+                    message: 'Debe contener un nombre el archivo'
+                },
+                regexp: {
+                    regexp: /^[0-9a-zA-Z-_.]+$/,
+                    message: 'Sin caracteres especiales',
+                },
+            },
+        },
+        usuario: {
+            validators: {
+                notEmpty: {
+                    message: 'Debe elegir el usuario',
+                },
+            },
+        },
+        clave: {
+            validators: {
+                notEmpty: {
+                    message: 'Debe contener una clave',
+                },
+                stringLength: {
+                    min: 8,
+                    message: 'Al menos 8 caracteres',
+                },
+            },
+        },
+    }
+});
+$('#eliminararchivocompartido').bootstrapValidator({
+    message: 'Este valor no es valido',
+    feedbackIcons: {
+        valid: 'fa fa-thumbs-up',
+        invalid: 'fa fa-thumbs-down',
+        validating: 'fa fa-thumbs-down'
+    },
+    fields: {
+        nombre: {
+            validators: {
+                notEmpty: {
+                    message: 'Debe contener un nombre el archivo'
+                },
+                regexp: {
+                    regexp: /^[0-9a-zA-Z-_.]+$/,
+                    message: 'Sin caracteres especiales',
+                },
+            },
+        },
+        cantveces: {
+            validators: {
+                notEmpty: {
+                    message: 'Debe mostrar cantidad de veces compartido',
+                },
+            },
+        },
+        motivo: {
+            validators: {
+                notEmpty: {
+                    message: 'Debe escribir el motivo',
+                },
+            },
+        },
+        usuario: {
+            validators: {
+                notEmpty: {
+                    message: 'Debe seleccionar el usuario',
+                },
+            },
+        },
+    },
+});
+$('#eliminararchivo').bootstrapValidator({
+    message: 'Este valor no es valido',
+    feedbackIcons: {
+        valid: 'fa fa-thumbs-up',
+        invalid: 'fa fa-thumbs-down',
+        validating: 'fa fa-thumbs-down'
+    },
+    fields: {
+        nombre: {
+            validators: {
+                notEmpty: {
+                    message: 'Debe contener un nombre el archivo'
+                },
+                regexp: {
+                    regexp: /^[0-9a-zA-Z-_.]+$/,
+                    message: 'Sin caracteres especiales',
+                },
+            },
+        },
+        motivo: {
+            validators: {
+                notEmpty: {
+                    message: 'Debe escribir el motivo',
+                },
+            },
+        },
+        usuario: {
+            validators: {
+                notEmpty: {
+                    message: 'Debe seleccionar el usuario',
+                },
+            },
+        },
+    },
 });
 
 /*regexp: {
