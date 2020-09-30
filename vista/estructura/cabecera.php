@@ -33,13 +33,13 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-dark text-center sticky-top flex-md-nowrap bg-dark shadow">
+    <nav class="navbar navbar-dark text-center bg-dark shadow">
         <h3 class="col-12 text-white">Esta es la cabecera</h3>
-        <button class="navbar-toggler position-absolute d-md-none bg-info collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler position-absolute d-md-none bg-primary collapsed" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu"  aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
     </nav>
-    <div class="container-fluid bg-primary ">
+    <div class="container-fluid bg-primary">
         <?php
         include_once("../../../configuracion.php");
         include_once("lateral.php");
