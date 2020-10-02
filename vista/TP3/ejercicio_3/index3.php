@@ -5,7 +5,7 @@ include_once("../../estructura/cabecera.php");
 <div class="p-3 col-md-9 col-lg-10 bg-white">
     <div class="border border-light m-3 shadow">
         <a class="text-justify text-primary btn btn-light btn-block bg-light"><i class="fa fa-pencil-square-o"></i> Cinem@as</a>
-        <form class="p-4" id="tp2eje2" name="tp2eje2" action="accion4.php" method="POST" data-toggle="validator" autocomplete="on">
+        <form class="p-4" id="tp3eje3" name="tp3eje3" action="accion3.php" method="POST" data-toggle="validator" autocomplete="on" enctype="multipart/form-data">
             <div class="form-row">
                 <div class="col-md-6 form-group">
                     <label for="titulo">Título: </label>
@@ -55,7 +55,6 @@ include_once("../../estructura/cabecera.php");
                         <option value="suspenso">Suspenso</option>
                         <option value="otros">Otros</option>
                     </select>
-
                 </div>
             </div>
             <div class="form-row">
@@ -78,12 +77,20 @@ include_once("../../estructura/cabecera.php");
                         <input class="form-check-input" type="radio" id="mayor" name="espectador" value="Mayores de 18 años">
                         <label class="form-check-label" for="mayor">Mayores de 18 años</label>
                     </div>
-
                 </div>
             </div>
-            <div class="col-md-12 form-group">
+            <div class="form-group">
                 <label for="sinopsis">Sinopsis:</label>
                 <textarea type="text" id="sinopsis" name="sinopsis" class="form-control" row=3 value=""></textarea>
+            </div>
+            <div class="media col-md-6">
+                <div class="media-left">
+                    <img src="../../../archivos/upload.png" class="media-object" width="100">
+                </div>
+                <div class="media-body form-group">
+                    <h4>Imagen para la pelicula:</h4>
+                    <input type="file" class="form-control-file" id="archivo" name="archivo">
+                </div>
             </div>
             <div class="d-flex justify-content-end">
                 <button type="submit" class="btn btn-primary">Enviar</button>

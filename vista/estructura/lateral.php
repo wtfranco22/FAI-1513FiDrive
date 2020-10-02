@@ -30,6 +30,17 @@
                     Ejercicio 2</a>
             </div>
         </div>
+        <button class="btn btn-dark mt-5 mb-5 btn-block" data-toggle="collapse" data-target="#tp3">Trabajo Práctico 3</button>
+        <div id="tp3" class="collapse">
+            <div class="list-group">
+                <a href="../../TP3/ejercicio_1/index1.php" class="list-group-item">
+                    Ejercicio 1</a>
+                <a href="../../TP3/ejercicio_2/index2.php" class="list-group-item">
+                    Ejercicio 2</a>
+                <a href="../../TP3/ejercicio_3/index3.php" class="list-group-item">
+                    Ejercicio 3</a>
+            </div>
+        </div>
         <button class="btn btn-dark mt-5 mb-5 btn-block" data-toggle="collapse" data-target="#tpe">Trabajos Prácticos E</button>
         <div id="tpe" class="collapse">
             <div class="list-group">

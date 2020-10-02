@@ -8,17 +8,8 @@ function mostrarClave() {
         $('#ojo').removeClass('fa fa-eye').addClass('fa fa-eye-slash');
     }
 }
-function ingresarClave() {
-    contra = document.getElementById("ingresarclave");
-    protege = document.getElementById("protegerpass");
-    if (protege.checked) {
-        contra.style.display='block';
-    }
-    else {
-        contra.style.display='none';
-    }
-}
-$('#eje1').bootstrapValidator({
+
+$('#tp1eje1').bootstrapValidator({
     message: 'Este valor no es valido',
 
     feedbackIcons: {
@@ -41,7 +32,7 @@ $('#eje1').bootstrapValidator({
     }
 }
 );
-$('#eje3').bootstrapValidator({
+$('#tp1eje3').bootstrapValidator({
     message: 'Este valor no es valido',
 
     feedbackIcons: {
@@ -104,7 +95,7 @@ $('#eje3').bootstrapValidator({
     }
 }
 );
-$('#eje4').bootstrapValidator({
+$('#tp1eje4').bootstrapValidator({
     message: 'Este valor no es valido',
 
     feedbackIcons: {
@@ -167,7 +158,7 @@ $('#eje4').bootstrapValidator({
     }
 }
 );
-$('#eje5').bootstrapValidator({
+$('#tp1eje5').bootstrapValidator({
     message: "Ingrese un valor valido",
 
     feedbackIcons: {
@@ -236,7 +227,7 @@ $('#eje5').bootstrapValidator({
         },
     }
 });
-$('#eje6').bootstrapValidator({
+$('#tp1eje6').bootstrapValidator({
     message: "Ingrese un valor valido",
 
     feedbackIcons: {
@@ -312,7 +303,7 @@ $('#eje6').bootstrapValidator({
         },
     }
 });
-$('#eje7').bootstrapValidator({
+$('#tp1eje7').bootstrapValidator({
     message: 'Este valor no es valido',
 
     feedbackIcons: {
@@ -344,7 +335,7 @@ $('#eje7').bootstrapValidator({
         },
     },
 });
-$('#eje8').bootstrapValidator({
+$('#tp1eje8').bootstrapValidator({
     message: 'Este valor no es valido',
 
     feedbackIcons: {
@@ -397,7 +388,7 @@ $('#eje8').bootstrapValidator({
         }
     }
 });
-$('#eje11').bootstrapValidator({
+$('#tp2eje1').bootstrapValidator({
     message: 'Este valor no es valido',
 
     feedbackIcons: {
@@ -435,7 +426,8 @@ $('#eje11').bootstrapValidator({
         }
     }
 });
-$('#eje12').bootstrapValidator({
+$('#tp2eje2').bootstrapValidator({
+
     message: 'Este valor no es valido',
     feedbackIcons: {
         valid: 'fa fa-thumbs-up',
@@ -567,7 +559,7 @@ $('#armarchivo').bootstrapValidator({
                     message: 'Debe contener un nombre el archivo'
                 },
                 regexp: {
-                    regexp: /^[0-9a-zA-Z-_.]+$/,
+                    regexp: /^\w+$/,
                     message: 'Sin caracteres especiales',
                 },
             },
@@ -722,7 +714,183 @@ $('#eliminararchivo').bootstrapValidator({
         },
     },
 });
-
+$('#tp3eje1').bootstrapValidator({
+    message: 'El valor ingresa es incorrecto',
+    feedbackIcons: {
+        valid: 'fa fa-thumbs-up',
+        invalid: 'fa fa-thumbs-down',
+        validating: 'fa fa-thumbs-down'
+    },
+    fields:{
+        archivo:{
+            validators:{
+                notEmpty: {
+                    message: 'Seleccione un archivo por favor'
+                },
+                file: {
+                    type: 'application/msword,application/pdf',
+                    extension: 'doc,pdf',
+                    maxSize: 2097152 ,
+                    message: 'Seleccione .PDF o .DOC o elemento mas pequeño'
+                },
+            },
+        },
+    },
+});
+$('#tp3eje2').bootstrapValidator({
+    message: 'El valor ingresa es incorrecto',
+    feedbackIcons: {
+        valid: 'fa fa-thumbs-up',
+        invalid: 'fa fa-thumbs-down',
+        validating: 'fa fa-thumbs-down'
+    },
+    fields:{
+        archivo:{
+            validators:{
+                notEmpty: {
+                    message: 'Seleccione un archivo por favor'
+                },
+                file: {
+                    type: 'text/plain',
+                    extension: 'txt',
+                    maxSize: 2097152 ,
+                    message: 'Seleccione un archivo .txt'
+                },
+            },
+        },
+    },
+});
+$('#tp3eje3').bootstrapValidator({
+    message: 'Este valor no es valido',
+    feedbackIcons: {
+        valid: 'fa fa-thumbs-up',
+        invalid: 'fa fa-thumbs-down',
+        validating: 'fa fa-thumbs-down'
+    },
+    fields: {
+        titulo: {
+            validators: {
+                notEmpty: {
+                    message: 'Debe ingresar el titulo',
+                },
+                regexp: {
+                    regexp: /^[0-9a-zA-ZáéíóúÁÉÍÓÚ\s,]+$/,
+                    message: 'Sin sombolos extraños',
+                },
+            },
+        },
+        actores: {
+            validators: {
+                notEmpty: {
+                    message: 'Al menos un actor debe ingresar',
+                },
+                regexp: {
+                    regexp: /^[0-9a-zA-ZáéíóúÁÉÍÓÚ\s,]+$/,
+                    message: 'Sin simbolos extraños',
+                },
+            },
+        },
+        dire: {
+            validators: {
+                notEmpty: {
+                    message: 'Ingrese nombre del director',
+                },
+                regexp: {
+                    regexp: /^[0-9a-zA-ZáéíóúÁÉÍÓÚ\s,]+$/,
+                    message: 'Solo letras por favor',
+                },
+            }
+        },
+        guion: {
+            validators: {
+                notEmpty: {
+                    message: 'Ingrese el gión',
+                },
+            },
+        },
+        produccion: {
+            validators: {
+                notEmpty: {
+                    message: 'Ingrese la producción',
+                },
+            }
+        },
+        anio: {
+            validators: {
+                notEmpty: {
+                    message: 'Ingrese el año por favor!',
+                },
+                numeric: {
+                    message: 'Solamente números!',
+                },
+                stringLength: {
+                    min: 1,
+                    max: 4,
+                    message: 'Ingrese un año valido',
+                },
+            }
+        },
+        nacionalidad: {
+            validators: {
+                notEmpty: {
+                    message: 'Ingrese la nacionalidad',
+                },
+                regexp: {
+                    regexp: /[a-zA-ZáéíóúÁÉÍÓÚ\s]+/,
+                }
+            }
+        },
+        genero: {
+            validators: {
+                notEmpty: {
+                    message: 'Género, por favor!',
+                },
+            }
+        },
+        duracion: {
+            validators: {
+                notEmpty: {
+                    message: 'Los minutos de la pelicula',
+                },
+                numeric: {
+                    message: 'Solo números por favor',
+                },
+                stringLength: {
+                    min: 1,
+                    max: 3,
+                    message: '3 dígitos',
+                },
+            },
+        },
+        espectador: {
+            validators: {
+                notEmpty: {
+                    message: "Seleccione la edad acorde",
+                },
+            }
+        },
+        sinopsis: {
+            validators: {
+                notEmpty: {
+                    message: 'Ingrese la sinopsis',
+                }
+            }
+        },
+        archivo: {
+            validators:{
+                notEmpty: {
+                    message: 'Seleccione un archivo por favor'
+                },
+                file: {
+                    type: 'image/gif,image/jpeg,image/png',
+                    extension: 'gif,jpg,png',
+                    maxSize: 10485760 ,
+                    message: 'Seleccione una imagen'
+                },
+            },            
+        }
+    }
+})
 /*regexp: {
     regexp: '(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,}$',
     message: 'Debe tener al menos un numero, letra mayuscula y minuscula'

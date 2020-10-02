@@ -3,7 +3,7 @@ include_once("../../estructura/cabecera.php");
 ?>
 
 <div class="col-md-9 col-lg-10 bg-light">
-    <form class="col-md-6" id="eje5" name="eje5" action="accion5.php" autocomplete="off" method="POST" data-toggle="validator">
+    <form class="col-md-6" id="tp1eje5" name="tp1eje5" action="accion5.php" autocomplete="off" method="POST" data-toggle="validator">
         <div  class="form-group">
             <label for="nombre">Nombre:</label>
             <input type="text" class="form-control" id="nombre" name="nombre" />

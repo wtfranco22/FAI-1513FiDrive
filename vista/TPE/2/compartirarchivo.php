@@ -26,12 +26,12 @@ include_once("../../estructura/cabecera.php");
             </select>
         </div>
         <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="protegerpass" name="protegerpass" onchange="ingresarClave()">
+            <input type="checkbox" class="form-check-input" id="protegerpass" name="protegerpass" data-toggle="collapse" data-target="#ingresarclave">
             <label class="form-check-label" for="protegerpass">Proteger con contraseña</label>
         </div>
-        <div id="ingresarclave" class="form-group" style="display: none;">
+        <div id="ingresarclave" class="form-group collapse">
             <div class="input-group">
-                <input type="password" Class="form-control" id="clave" name="clave">
+                <input type="password" class="form-control" id="clave" name="clave">
                 <button type="button" id="ojo" class="btn btn-dark fa fa-eye-slash" onclick="mostrarClave()"></button>
             </div>
         </div>
