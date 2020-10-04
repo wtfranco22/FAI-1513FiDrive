@@ -1,14 +1,3 @@
-function mostrarClave() {
-    var cambio = document.getElementById("clave");
-    if (cambio.type == "password") {
-        cambio.type = "text";
-        $('#ojo').removeClass('fa fa-eye-slash').addClass('fa fa-eye');
-    } else {
-        cambio.type = "password";
-        $('#ojo').removeClass('fa fa-eye').addClass('fa fa-eye-slash');
-    }
-}
-
 $('#tp1eje1').bootstrapValidator({
     message: 'Este valor no es valido',
 
@@ -545,175 +534,6 @@ $('#tp2eje2').bootstrapValidator({
         }
     }
 });
-$('#armarchivo').bootstrapValidator({
-    message: 'Este valor no es valido',
-    feedbackIcons: {
-        valid: 'fa fa-thumbs-up',
-        invalid: 'fa fa-thumbs-down',
-        validating: 'fa fa-thumbs-down'
-    },
-    fields: {
-        nombre: {
-            validators: {
-                notEmpty: {
-                    message: 'Debe contener un nombre el archivo'
-                },
-                regexp: {
-                    regexp: /^\w+$/,
-                    message: 'Sin caracteres especiales',
-                },
-            },
-        },
-        descripcion: {
-            validators: {
-                notEmpty: {
-                    message: 'Debe tener una descripción',
-                },
-            },
-        },
-        usuario: {
-            validators: {
-                notEmpty: {
-                    message: 'Debe elegir el usuario',
-                },
-            },
-        },
-        tipo: {
-            validators: {
-                notEmpty: {
-                    message: 'Debe elegir el tipo de archivo',
-                },
-            },
-        },
-        clave: {
-            validators: {
-                notEmpty: {
-                    message: 'Debe contener una clave',
-                },
-                stringLength: {
-                    min: 8,
-                    message: 'Al menos 8 caracteres',
-                },
-            },
-        },
-    }
-});
-$('#compartirarchivo').bootstrapValidator({
-    message: 'Este valor no es valido',
-    feedbackIcons: {
-        valid: 'fa fa-thumbs-up',
-        invalid: 'fa fa-thumbs-down',
-        validating: 'fa fa-thumbs-down'
-    },
-    fields: {
-        nombre: {
-            validators: {
-                notEmpty: {
-                    message: 'Debe contener un nombre el archivo'
-                },
-                regexp: {
-                    regexp: /^[0-9a-zA-Z-_.]+$/,
-                    message: 'Sin caracteres especiales',
-                },
-            },
-        },
-        usuario: {
-            validators: {
-                notEmpty: {
-                    message: 'Debe elegir el usuario',
-                },
-            },
-        },
-        clave: {
-            validators: {
-                notEmpty: {
-                    message: 'Debe contener una clave',
-                },
-                stringLength: {
-                    min: 8,
-                    message: 'Al menos 8 caracteres',
-                },
-            },
-        },
-    }
-});
-$('#eliminararchivocompartido').bootstrapValidator({
-    message: 'Este valor no es valido',
-    feedbackIcons: {
-        valid: 'fa fa-thumbs-up',
-        invalid: 'fa fa-thumbs-down',
-        validating: 'fa fa-thumbs-down'
-    },
-    fields: {
-        nombre: {
-            validators: {
-                notEmpty: {
-                    message: 'Debe contener un nombre el archivo'
-                },
-                regexp: {
-                    regexp: /^[0-9a-zA-Z-_.]+$/,
-                    message: 'Sin caracteres especiales',
-                },
-            },
-        },
-        cantveces: {
-            validators: {
-                notEmpty: {
-                    message: 'Debe mostrar cantidad de veces compartido',
-                },
-            },
-        },
-        motivo: {
-            validators: {
-                notEmpty: {
-                    message: 'Debe escribir el motivo',
-                },
-            },
-        },
-        usuario: {
-            validators: {
-                notEmpty: {
-                    message: 'Debe seleccionar el usuario',
-                },
-            },
-        },
-    },
-});
-$('#eliminararchivo').bootstrapValidator({
-    message: 'Este valor no es valido',
-    feedbackIcons: {
-        valid: 'fa fa-thumbs-up',
-        invalid: 'fa fa-thumbs-down',
-        validating: 'fa fa-thumbs-down'
-    },
-    fields: {
-        nombre: {
-            validators: {
-                notEmpty: {
-                    message: 'Debe contener un nombre el archivo'
-                },
-                regexp: {
-                    regexp: /^[0-9a-zA-Z-_.]+$/,
-                    message: 'Sin caracteres especiales',
-                },
-            },
-        },
-        motivo: {
-            validators: {
-                notEmpty: {
-                    message: 'Debe escribir el motivo',
-                },
-            },
-        },
-        usuario: {
-            validators: {
-                notEmpty: {
-                    message: 'Debe seleccionar el usuario',
-                },
-            },
-        },
-    },
-});
 $('#tp3eje1').bootstrapValidator({
     message: 'El valor ingresa es incorrecto',
     feedbackIcons: {
@@ -891,7 +711,172 @@ $('#tp3eje3').bootstrapValidator({
         }
     }
 })
-/*regexp: {
-    regexp: '(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,}$',
-    message: 'Debe tener al menos un numero, letra mayuscula y minuscula'
-}*/
+$('#armarchivo').bootstrapValidator({
+    message: 'Este valor no es valido',
+    feedbackIcons: {
+        valid: 'fa fa-thumbs-up',
+        invalid: 'fa fa-thumbs-down',
+        validating: 'fa fa-thumbs-down'
+    },
+    fields: {
+        nombre: {
+            validators: {
+                notEmpty: {
+                    message: 'Debe contener un nombre el archivo'
+                },
+                regexp: {
+                    regexp: /^\w+$/,
+                    message: 'Sin caracteres especiales',
+                },
+            },
+        },
+        descripcion: {
+            validators: {
+                notEmpty: {
+                    message: 'Debe tener una descripción',
+                },
+            },
+        },
+        usuario: {
+            validators: {
+                notEmpty: {
+                    message: 'Debe elegir el usuario',
+                },
+            },
+        },
+        tipo: {
+            validators: {
+                notEmpty: {
+                    message: 'Debe elegir el tipo de archivo',
+                },
+            },
+        },
+        clave: {
+            validators: {
+                notEmpty: {
+                    message: 'Debe contener una clave',
+                },
+                stringLength: {
+                    min: 8,
+                    message: 'Al menos 8 caracteres',
+                },
+            },
+        },
+    }
+});
+$('#compartirarchivo').bootstrapValidator({
+    message: 'Este valor no es valido',
+    feedbackIcons: {
+        valid: 'fa fa-thumbs-up',
+        invalid: 'fa fa-thumbs-down',
+        validating: 'fa fa-thumbs-down'
+    },
+    fields: {
+        nombre: {
+            validators: {
+                notEmpty: {
+                    message: 'Debe contener un nombre el archivo'
+                },
+                regexp: {
+                    regexp: /^[0-9a-zA-Z-_.]+$/,
+                    message: 'Sin caracteres especiales',
+                },
+            },
+        },
+        usuario: {
+            validators: {
+                notEmpty: {
+                    message: 'Debe elegir el usuario',
+                },
+            },
+        },
+        clave: {
+            validators: {
+                notEmpty: {
+                    message: 'Debe contener una clave',
+                },
+                stringLength: {
+                    min: 8,
+                    message: 'Al menos 8 caracteres',
+                },
+            },
+        },
+    }
+});
+$('#eliminararchivocompartido').bootstrapValidator({
+    message: 'Este valor no es valido',
+    feedbackIcons: {
+        valid: 'fa fa-thumbs-up',
+        invalid: 'fa fa-thumbs-down',
+        validating: 'fa fa-thumbs-down'
+    },
+    fields: {
+        nombre: {
+            validators: {
+                notEmpty: {
+                    message: 'Debe contener un nombre el archivo'
+                },
+                regexp: {
+                    regexp: /^[0-9a-zA-Z-_.]+$/,
+                    message: 'Sin caracteres especiales',
+                },
+            },
+        },
+        cantveces: {
+            validators: {
+                notEmpty: {
+                    message: 'Debe mostrar cantidad de veces compartido',
+                },
+            },
+        },
+        motivo: {
+            validators: {
+                notEmpty: {
+                    message: 'Debe escribir el motivo',
+                },
+            },
+        },
+        usuario: {
+            validators: {
+                notEmpty: {
+                    message: 'Debe seleccionar el usuario',
+                },
+            },
+        },
+    },
+});
+$('#eliminararchivo').bootstrapValidator({
+    message: 'Este valor no es valido',
+    feedbackIcons: {
+        valid: 'fa fa-thumbs-up',
+        invalid: 'fa fa-thumbs-down',
+        validating: 'fa fa-thumbs-down'
+    },
+    fields: {
+        nombre: {
+            validators: {
+                notEmpty: {
+                    message: 'Debe contener un nombre el archivo'
+                },
+                regexp: {
+                    regexp: /^[0-9a-zA-Z-_.]+$/,
+                    message: 'Sin caracteres especiales',
+                },
+            },
+        },
+        motivo: {
+            validators: {
+                notEmpty: {
+                    message: 'Debe escribir el motivo',
+                },
+            },
+        },
+        usuario: {
+            validators: {
+                notEmpty: {
+                    message: 'Debe seleccionar el usuario',
+                },
+            },
+        },
+    },
+});

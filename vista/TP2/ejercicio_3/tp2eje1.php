@@ -4,7 +4,7 @@ include_once("../../estructura/cabecera.php");
 
 <div class="col-md-9 col-lg-10 bg-white">
 
-    <form class="row justify-content-around" id="tp2eje1" name="tp2eje1" method="POST" action="accion3.php" data-toggle="validator" autocomplete="off">
+    <form class="row justify-content-around" id="tp2eje1" name="tp2eje1" method="POST" action="accion1.php" data-toggle="validator" autocomplete="off">
         <div class="bg-dark p-4 m-5 shadow">
             <div class="bg-light p-4">
                 <h1 class="m-5">Iniciar sesión</h1>

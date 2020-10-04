@@ -1,7 +1,7 @@
 <?php
 include_once("../../estructura/cabecera.php");
 ?>
-<div id="tp3accion1" name="tp3accion1" class="col-md-9 col-lg-10 bg-light">
+<div id="accion1" name="accion1" class="col-md-9 col-lg-10 bg-light">
     <h2>Archivo Subido: </h2>
     <?php
     $datos = data_submitted();
@@ -10,7 +10,7 @@ include_once("../../estructura/cabecera.php");
     echo $respuesta;
     ?>
     <br />
-    <a class="btn btn-primary" href='index1.php'>volver</a>
+    <a class="btn btn-primary" href='tp3eje1.php'>volver</a>
 </div>
 
 <?php

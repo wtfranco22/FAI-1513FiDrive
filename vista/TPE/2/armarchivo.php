@@ -3,7 +3,7 @@ include_once("../../estructura/cabecera.php");
 ?>
 
 <div class="p-3 col-md-9 col-lg-10 bg-white">
-    <form id="armarchivo" name="armartirarchivo" action="accion1.php" method="POST" data-toggle="validator">
+    <form id="armarchivo" name="armarchivo" action="accion1.php" method="POST" data-toggle="validator">
         <div class="form-group">
             <label for="nombre"> Nombre del archivo: </label>
             <input type="text" class="form-control" id="nombre" name="nombre" value="1234.png">

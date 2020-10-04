@@ -11,7 +11,7 @@ include_once("../../../control/control.php");
     echo "<h2>".$respuesta."</h2>";
     ?>
     <br/>
-    <a class="btn btn-primary" href='index7.php'> volver</a>
+    <a class="btn btn-primary" href='tp1eje7.php'> volver</a>
 </div>
 
 <?php

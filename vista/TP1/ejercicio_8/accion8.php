@@ -9,7 +9,7 @@ include_once("../../estructura/cabecera.php");
     $respuesta = $obj->valorCine($datos);
     echo "<h2>".$respuesta."</h2>";
     ?>
-    <a class="btn btn-primary" href='index8.php'>volver</a>
+    <a class="btn btn-primary" href='tp1eje8.php'>volver</a>
 </div>
 
 <?php

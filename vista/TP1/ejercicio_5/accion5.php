@@ -10,7 +10,7 @@ include_once("../../estructura/cabecera.php");
     echo "<h2>".$respuesta."</h2>";
     ?>
     <br/>
-    <a class="btn btn-outline-primary" href="index5.php">volver</a>
+    <a class="btn btn-outline-primary" href="tp1eje5.php">volver</a>
 </div>
 
 <?php

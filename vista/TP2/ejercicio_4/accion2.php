@@ -1,7 +1,7 @@
 <?php
 include_once("../../estructura/cabecera.php");
 ?>
-<div id="accion1" name="accion1" class="col-md-9 col-lg-10 bg-light">
+<div id="accion2" name="accion2" class="col-md-9 col-lg-10 bg-light">
     <h1 class="text-primary">La película introducida es </h1>
     <p class="text-success">
         <?php
@@ -11,7 +11,7 @@ include_once("../../estructura/cabecera.php");
         echo $respuesta;
         ?>
     </p>
-    <a class="btn btn-primary" href='index4.php'>volver</a>
+    <a class="btn btn-primary" href='tp2eje2.php'>volver</a>
 </div>
 
 <?php

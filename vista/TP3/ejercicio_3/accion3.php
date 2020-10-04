@@ -11,7 +11,7 @@ include_once("../../estructura/cabecera.php");
         echo $respuesta;
         ?>
     </p>
-    <a class="btn btn-primary" href='index3.php'>volver</a>
+    <a class="btn btn-primary" href='tp3eje3.php'>volver</a>
 </div>
 
 <?php
