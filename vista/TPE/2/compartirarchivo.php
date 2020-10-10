@@ -2,11 +2,16 @@
 include_once("../../estructura/cabecera.php");
 ?>
 
-<div class="p-3 col-md-9 col-lg-10 bg-white">
+
     <form id="compartirarchivo" name="compartirarchivo" action="accion2.php" method="POST" data-toggle="validator">
-        <div class="form-group">
-            <label for="nombre"> Nombre del archivo: </label>
-            <input type="text" class="form-control" id="nombre" name="nombre" value="1234.png" readonly>
+        <div class="media">
+            <div class="media-left">
+                <img src="../../../archivos/upload.png" class="media-object" width="100">
+            </div>
+            <div class="media-body form-group">
+                <h4>Archivo a compartir:</h4>
+                <input type="file" class="form-control-file" id="archivo" name="archivo">
+            </div>
         </div>
         <div class="form-group">
             <label for="dias"> Cantidad de días compartido: </label>
@@ -31,15 +36,17 @@ include_once("../../estructura/cabecera.php");
         </div>
         <div id="ingresarclave" class="form-group collapse">
             <div class="input-group">
-                <input type="password" class="form-control" id="clave" name="clave">
+                <input type="password" class="form-control" id="clave" name="clave" oninput="fortaleza()">
                 <button type="button" id="ojo" class="btn btn-dark fa fa-eye-slash" onclick="mostrarClave()"></button>
+                
             </div>
+            <p id="aviso"></p>
         </div>
         <div class="form-group">
-            <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#enlacegenerado"> Generar hash </button>
+            <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#enlacegenerado" onclick="generarHash()"> Generar hash </button>
             <div id="enlacegenerado" class="collapse">
                 <label for="enlace"> link para compartir: </label>
-                <input type="text" id="enlace" class="form-control" name="enlace" value="FAI-1513/imagenes/1234.png" readonly>
+                <input type="text" id="enlace" class="form-control" value="" name="enlace" readonly>
             </div>
         </div>
         <div class="clearfix">

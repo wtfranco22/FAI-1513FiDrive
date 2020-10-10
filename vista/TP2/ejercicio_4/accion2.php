@@ -1,7 +1,8 @@
 <?php
 include_once("../../estructura/cabecera.php");
+include_once("../../../configuracion.php");
 ?>
-<div id="accion2" name="accion2" class="col-md-9 col-lg-10 bg-light">
+
     <h1 class="text-primary">La película introducida es </h1>
     <p class="text-success">
         <?php

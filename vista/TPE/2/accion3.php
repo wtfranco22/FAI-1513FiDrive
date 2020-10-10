@@ -1,7 +1,8 @@
 <?php
 include_once("../../estructura/cabecera.php");
+include_once("../../../configuracion.php");
 ?>
-<div id="accion3" name="accion3" class="col-md-9 col-lg-10 bg-light">
+
     <h2>Eliminar Archivo Compartido: </h2>
     <?php
     $datos = data_submitted();

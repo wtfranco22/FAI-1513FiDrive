@@ -2,7 +2,7 @@
 include_once("../../estructura/cabecera.php");
 ?>
 
-<div class="p-3 col-md-9 col-lg-10 bg-white">
+
     <form id="eliminararchivocompartido" name="eliminararchivocompartido" action="accion3.php" method="POST" data-toggle="validator">
         <div class="form-group">
             <label for="nombre"> Nombre del archivo: </label>

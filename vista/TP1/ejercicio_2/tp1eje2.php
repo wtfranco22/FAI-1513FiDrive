@@ -2,7 +2,7 @@
 include_once("../../estructura/cabecera.php");
 ?>
 <script src="js/validar_horario.js" type="text/javascript"></script>
-<div class="col-md-9 col-lg-10 bg-light">
+
     <form id="tp1eje2" name="tp1eje2" method="GET" action="accion2.php" onsubmit="return validarHora()" autocomplete="off">
         <table>
             <div class="text-center">

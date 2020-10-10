@@ -541,16 +541,16 @@ $('#tp3eje1').bootstrapValidator({
         invalid: 'fa fa-thumbs-down',
         validating: 'fa fa-thumbs-down'
     },
-    fields:{
-        archivo:{
-            validators:{
+    fields: {
+        archivo: {
+            validators: {
                 notEmpty: {
                     message: 'Seleccione un archivo por favor'
                 },
                 file: {
                     type: 'application/msword,application/pdf',
                     extension: 'doc,pdf',
-                    maxSize: 2097152 ,
+                    maxSize: 2097152,
                     message: 'Seleccione .PDF o .DOC o elemento mas pequeño'
                 },
             },
@@ -564,16 +564,16 @@ $('#tp3eje2').bootstrapValidator({
         invalid: 'fa fa-thumbs-down',
         validating: 'fa fa-thumbs-down'
     },
-    fields:{
-        archivo:{
-            validators:{
+    fields: {
+        archivo: {
+            validators: {
                 notEmpty: {
                     message: 'Seleccione un archivo por favor'
                 },
                 file: {
                     type: 'text/plain',
                     extension: 'txt',
-                    maxSize: 2097152 ,
+                    maxSize: 2097152,
                     message: 'Seleccione un archivo .txt'
                 },
             },
@@ -697,20 +697,20 @@ $('#tp3eje3').bootstrapValidator({
             }
         },
         archivo: {
-            validators:{
+            validators: {
                 notEmpty: {
                     message: 'Seleccione un archivo por favor'
                 },
                 file: {
                     type: 'image/gif,image/jpeg,image/png',
                     extension: 'gif,jpg,png',
-                    maxSize: 10485760 ,
+                    maxSize: 10485760,
                     message: 'Seleccione una imagen'
                 },
-            },            
+            },
         }
     }
-})
+});
 $('#armarchivo').bootstrapValidator({
     message: 'Este valor no es valido',
     feedbackIcons: {
@@ -751,17 +751,6 @@ $('#armarchivo').bootstrapValidator({
                 },
             },
         },
-        clave: {
-            validators: {
-                notEmpty: {
-                    message: 'Debe contener una clave',
-                },
-                stringLength: {
-                    min: 8,
-                    message: 'Al menos 8 caracteres',
-                },
-            },
-        },
     }
 });
 $('#compartirarchivo').bootstrapValidator({
@@ -772,14 +761,14 @@ $('#compartirarchivo').bootstrapValidator({
         validating: 'fa fa-thumbs-down'
     },
     fields: {
-        nombre: {
+        archivo: {
             validators: {
                 notEmpty: {
-                    message: 'Debe contener un nombre el archivo'
+                    message: 'Debe elegir un archivo'
                 },
-                regexp: {
-                    regexp: /^[0-9a-zA-Z-_.]+$/,
-                    message: 'Sin caracteres especiales',
+                file: {
+                    maxSize: 20971520,
+                    message: 'archivo demasiado grande, Max 20MB'
                 },
             },
         },
@@ -787,17 +776,6 @@ $('#compartirarchivo').bootstrapValidator({
             validators: {
                 notEmpty: {
                     message: 'Debe elegir el usuario',
-                },
-            },
-        },
-        clave: {
-            validators: {
-                notEmpty: {
-                    message: 'Debe contener una clave',
-                },
-                stringLength: {
-                    min: 8,
-                    message: 'Al menos 8 caracteres',
                 },
             },
         },

@@ -2,7 +2,7 @@
 include_once("../../estructura/cabecera.php");
 ?>
 
-<div class="p-3 col-md-9 col-lg-10 bg-white">
+
     <div class="border border-light m-3 shadow">
         <a class="text-justify text-primary btn btn-light btn-block bg-light"><i class="fa fa-pencil-square-o"></i> Cinem@as</a>
         <form class="p-4" id="tp2eje2" name="tp2eje2" action="accion2.php" method="POST" data-toggle="validator" autocomplete="on">

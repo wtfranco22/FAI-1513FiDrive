@@ -1,22 +1,28 @@
 <?php
 
 
+
 class archivo
 {
 
-    public function armarchivo($datos)
+    public function armarchivo($accion, $datos)
     {
         $nombre = $datos["nombre"];
         $descripcion = $datos["descripcion"];
         $usuario = $datos["usuario"];
         $tipo = $datos["tipo"];
-        $clave = $datos["clave"];
         $res =
             "<b>Nombre</b>: " . $nombre . "<br>" .
             "<b>Descripción</b>: " . $descripcion . "<br>" .
             "<b>Usuario</b>: " . $usuario . "<br>" .
-            "<b>Tipo de archivo</b>: " . $tipo . "<br>" .
-            "<b>Clave</b>: " . $clave . "<br>";
+            "<b>Tipo de archivo</b>: " . $tipo . "<br>";
+        if ($accion == 'alta') {
+            $res .= "<b>Se ha creado el nuevo archivo</b><br>";
+        } else {
+            $clave = $datos['clave'];
+            $res .= "<b>Clave</b>: " . $clave . "<br>" .
+                "<b>Se ha modificado el archivo</b><br>";
+        }
         return $res;
     }
 
@@ -160,15 +166,15 @@ class archivo
                 $tam = $_FILES['archivo']['size'];
 
                 if ($tam < 10485761) {
-                    $temp=$_FILES['archivo']['tmp_name'];
+                    $temp = $_FILES['archivo']['tmp_name'];
 
                     if (copy($temp, $dir . $_FILES['archivo']['name'])) {
-                        $nombre=$_FILES['archivo']['name'];
+                        $nombre = $_FILES['archivo']['name'];
                         $res = "<b>Nombre</b>: " . $nombre . "<br>" .
                             "<b>Tipo</b>: " . $tipo . "<br>" .
                             "<b>Tamaño</b>: " . $tam . "<br>" .
                             "<b>Carpeta temporal</b>: " . $temp . "<br>" .
-                            "<b>Se ha copiado con exito en</b> " . $dir . $nombre."<br><br>";
+                            "<b>Se ha copiado con exito en</b> " . $dir . $nombre . "<br><br>";
                         $titulo = $datos["titulo"];
                         $actores = $datos["actores"];
                         $director = $datos["dire"];
@@ -191,7 +197,7 @@ class archivo
                             "<b>Género</b>: " . $genero . "<br>" .
                             "<b>Duración</b>: " . $duracion . "<br>" .
                             "<b>Restricciones de edad</b>: " . $edades . "<br>" .
-                            "<b>Sinopsis</b>: " . $sinopsis . "<br><br>".
+                            "<b>Sinopsis</b>: " . $sinopsis . "<br><br>" .
                             "<img src = /FAI-1513/archivos/"   . $nombre . " class=\"w-50\">";
                     } else {
                         $error = "ERROR: No se pudo copiar el archivo en " . $dir;
@@ -205,8 +211,56 @@ class archivo
         } else {
             $error .= "ERROR: no se puedo cargar, no se pudo acceder al archivo temporal";
         }
-        if($error!=""){
-            $res.="<br><br>IMAGEN: ".$error;
+        if ($error != "") {
+            $res .= "<br><br>IMAGEN: " . $error;
+        }
+        return $res;
+    }
+    public function obtener_estructura_directorios($ruta)
+    {
+        // Se comprueba que realmente sea la ruta de un directorio
+        if (is_dir($ruta)) {
+            // Abre un gestor de directorios para la ruta indicada
+            $gestor = opendir($ruta);
+            $res = "<ul>";
+            // Recorre todos los elementos del directorio
+            while (($archivo = readdir($gestor)) !== false) {
+                $ruta_completa = $ruta . "/" . $archivo;
+                // Se muestran todos los archivos y carpetas excepto "." y ".."
+                if ($archivo != "." && $archivo != "..") {
+                    // Si es un directorio se recorre recursivamente
+                    if (is_dir($ruta_completa)) {
+                        $res .= '<i class=\'fa fa-folder-open-o\' aria-hidden=\'true\'></i>' .
+                            '<a href=' . $ruta_completa . ' id=\'' . $archivo . '\'>' . $archivo . '</a>' .
+                            $this->obtener_estructura_directorios($ruta_completa);
+                    } else {
+                        $res .= "<i class='fa fa-file' aria-hidden='true'>" . "&nbsp; &nbsp; &nbsp;" . " </i><a href=" . $ruta_completa . " id='" . $archivo . "'>" . $archivo . "</a><br>";
+                    }
+                }
+            }
+            // Cierra el gestor de directorios
+            closedir($gestor);
+            $res .= '</ul>';
+        } else {
+            $res = 'No es una ruta de directorio valida<br/>';
+        }
+        return $res;
+    }
+    public function obtenerArchivos($url)
+    {
+        $archivos = scandir($url, 1);
+        return $archivos;
+    }
+
+    public function crearCarpeta($datos)
+    {
+        $nombreNuevaCarpeta = $datos["nombreCarpeta"];
+        $directorio = $datos["ubicacion"];
+        if(!is_dir($directorio.$nombreNuevaCarpeta)){
+            mkdir($directorio.$nombreNuevaCarpeta);
+            $res = "Se ha creado una nueva carpeta en ".$directorio.$nombreNuevaCarpeta;
+        }else{
+            $res = "Ya existe la carpeta ".$nombreNuevaCarpeta." en ".$directorio;
         }
         return $res;
     }

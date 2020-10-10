@@ -3,13 +3,25 @@
 </div>
 
 </div>
+<script type="text/javascript">
+    ClassicEditor
+        .create(document.querySelector('#descripcion'), {
+            initialData: 'Esta es una descripción genérica, si lo necesita la puede cambiar.'
+        })
+        .then(editor => {
+            console.log(editor);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+</script>
 
-<script src="../../js/jquery-3.5.1.slim.min.js"></script>
-<script src="../../js/popper.min.js"></script>
-<script src="../../js/bootstrap/bootstrap.min.js"></script>
-<script src="../../js/bootstrap/bootstrapValidator.min.js"></script>
-<script src="../../js/bootstrap/validator.js"></script>
-<script src="../../js/funciones.js"></script>
+<script src="/FAI-1513FiDrive/vista/js/jquery-3.5.1.slim.min.js"></script>
+<script src="/FAI-1513FiDrive/vista/js/popper.min.js"></script>
+<script src="/FAI-1513FiDrive/vista/js/bootstrap/bootstrap.min.js"></script>
+<script src="/FAI-1513FiDrive/vista/js/bootstrap/bootstrapValidator.min.js"></script>
+<script src="/FAI-1513FiDrive/vista/js/bootstrap/validator.js"></script>
+<script src="/FAI-1513FiDrive/vista/js/funciones.js"></script>
 
 </body>
 

@@ -1,6 +1,6 @@
 <?php
 
-$GLOBALS['ROOT'] =$_SERVER['DOCUMENT_ROOT'] ."/FAI-1513/";
+$GLOBALS['ROOT'] =$_SERVER['DOCUMENT_ROOT'] ."/FAI-1513FiDrive/";
 
 include_once("utiles/funciones.php");
 include_once("control/control.php");

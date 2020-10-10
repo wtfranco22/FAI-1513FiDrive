@@ -1,7 +1,9 @@
 <?php
 
+
 class control
 {
+
     public function prueba()
     {
         return "Este viaja al acción1.php, crea objeto, y viaja al control.php verificando los datos del index";
@@ -178,8 +180,10 @@ class control
             "<b>Nacionalidad</b>: " . $nacionalidad . "<br>" .
             "<b>Género</b>: " . $genero . "<br>" .
             "<b>Duración</b>: " . $duracion . "<br>" .
-            "<b>Restricciones de edad</b>: " . $edades. "<br>".
+            "<b>Restricciones de edad</b>: " . $edades . "<br>" .
             "<b>Sinopsis</b>: " . $sinopsis . "<br>";
         return $res;
     }
+
+    
 }
